@@ -1,0 +1,398 @@
+:root {
+    --cor-fundo: #fefcf8;
+    --cor-principal: #b03a2e;
+    --cor-secundaria: #f0e5da;
+    --cor-botao: #b03a2e;
+    --cor-botao-hover: #8b2e23;
+    --cor-texto: #3a3a3a;
+    --border-radius: 12px;
+    --box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    --padding-item: 14px;
+    --gap-itens: 14px;
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   Body e Header
+========================= */
+body {
+    font-family: var(--fonte-principal);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+nav.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+nav.tabs button {
+    background-color: #fff3f0;
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav.tabs button.active,
+nav.tabs button:hover {
+    background-color: var(--cor-principal);
+    color: #fff;
+}
+
+/* =========================
+   Layout principal
+========================= */
+main {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cardapio {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-itens);
+}
+
+/* Subtítulo */
+#subtitulo-escolha {
+    font-size: 22px;
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+/* =========================
+   Item do cardápio
+========================= */
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    padding: var(--padding-item);
+    background: #fffaf5;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.item-img {
+    width: 80px;
+    height: 80px;
+    background-color: #f3e8df;
+    border-radius: var(--border-radius);
+    margin-right: 14px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 17px;
+    color: var(--cor-principal);
+    font-weight: 600;
+}
+
+.item-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+}
+
+/* Botões lateralizados */
+.controls-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+}
+
+/* Botão adicionar e voltar */
+button.add-btn, .btn-voltar-escolha {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.add-btn {
+    background-color: var(--cor-botao);
+    color: #fff;
+}
+
+.add-btn:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.btn-voltar-escolha {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+
+.btn-voltar-escolha:hover {
+    background-color: #d6c1b0;
+}
+
+/* =========================
+   Escolhas principais (pizza/bebidas)
+========================= */
+.escolhas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* Botões de tamanho da pizza */
+.btn-tamanho {
+    background-color: #fff3f0;
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 120px;
+    text-align: center;
+}
+
+.btn-tamanho:hover,
+.btn-tamanho.active {
+    background-color: var(--cor-principal);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Lista de sabores */
+.sabores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sabor-btn {
+    background-color: #fff;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sabor-btn:hover,
+.sabor-btn.active {
+    background-color: var(--cor-principal);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Checkbox de borda recheada */
+.borda-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.borda-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--cor-principal);
+    cursor: pointer;
+}
+
+/* Select de bebida */
+.select-bebida {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-secundaria);
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* =========================
+   Carrinho
+========================= */
+.carrinho {
+    flex: 1.2;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    background: #fffaf5;
+    box-shadow: var(--box-shadow);
+    height: fit-content;
+}
+
+.carrinho h2 {
+    margin-top: 0;
+    color: var(--cor-principal);
+    font-size: 22px;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+}
+
+.carrinho ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--cor-secundaria);
+    font-size: 14px;
+}
+
+.carrinho li button {
+    background-color: var(--cor-botao);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.carrinho li button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.carrinho p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+}
+
+/* Container dos botões */
+.cardapio button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 8px;
+}
+
+/* Botão de adicionar */
+.btn-add {
+  background-color: #27ae60; /* verde */
+  color: white;
+  font-weight: bold;
+}
+
+.btn-add:hover {
+  background-color: #219150;
+  transform: scale(1.05);
+}
+
+/* Botão de voltar */
+.btn-voltar {
+  background-color: #e74c3c; /* vermelho */
+  color: white;
+  font-weight: bold;
+}
+
+.btn-voltar:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Deixar lado a lado */
+.cardapio .btn-add,
+.cardapio .btn-voltar {
+  display: inline-block;
+}
+/* =========================
+   Responsividade
+========================= */
+@media(max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+
+    .cardapio {
+        gap: 12px;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-controls, .controls-lateral {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .item-img {
+        width: 100%;
+        height: 120px;
+        margin-bottom: 8px;
+    }
+
+    nav.tabs {
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+}
+
+/* =========================
+   Efeito ao adicionar ao carrinho
+========================= */
+.item.adicionado {
+    border: 2px solid gold;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    transform: scale(1.02);
+    transition: all 0.3s;
+}
