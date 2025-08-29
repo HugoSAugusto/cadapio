@@ -15,6 +15,9 @@
             <button data-tab="massas">Massas</button>
             <button data-tab="bebidas">Bebidas</button>
         </nav>
+        <div class="cart-icon" id="cartIcon">
+            🛒 <span id="cartCount">0</span>
+        </div>
     </header>
 
     <main>
@@ -30,12 +33,16 @@
             <h2>Carrinho</h2>
             <ul id="itens-carrinho"></ul>
             <p>Total: R$ <span id="total">0.00</span></p>
+            <button id="finalizarPedido">Finalizar Pedido</button>
         </aside>
+        
     </main>
 
     <script src="js/produtos/pizzas.js"></script>
     <script src="js/produtos/massas.js"></script>
     <script src="js/produtos/bebidas.js"></script>
+    <script src="js/cart.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/whatsapp.js"></script>
 </body>
 </html>

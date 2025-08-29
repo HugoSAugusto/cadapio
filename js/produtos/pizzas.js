@@ -69,15 +69,22 @@ function renderEscolhaPizza(cardapioSection, carrinhoItens, atualizarCarrinho, c
 
   // Limita a quantidade de sabores marcada
     const checkboxes = Array.from(document.querySelectorAll(".sabor"));
-    checkboxes.forEach(cb => {
-        cb.addEventListener("change", () => {
-            const selecionados = checkboxes.filter(c => c.checked);
-            if (selecionados.length > configTamanho.maxSabores) {
-                cb.checked = false; // desmarca o último clicado
-                alert(`Você só pode escolher até ${configTamanho.maxSabores} sabores!`);
-            }
-        });
+checkboxes.forEach(cb => {
+    cb.addEventListener("change", () => {
+        const selecionados = checkboxes.filter(c => c.checked);
+
+        // Se a quantidade atingir o máximo, rola até o botão de adicionar
+        if (selecionados.length === configTamanho.maxSabores) {
+            btnAdd.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Evita marcar mais do que o máximo
+        if (selecionados.length > configTamanho.maxSabores) {
+            cb.checked = false; // desmarca o último clicado
+            alert(`Você só pode escolher até ${configTamanho.maxSabores} sabores!`);
+        }
     });
+});
 
   // Borda recheada
   const bordaLabel = document.createElement("label");

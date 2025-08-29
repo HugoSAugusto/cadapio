@@ -5,7 +5,6 @@ const bebidas = [
         tamanhos: [
             { tamanho: "2L", preco: 10.00 },
             { tamanho: "1L", preco: 6.00 },
-            { tamanho: "500ml", preco: 4.00 }
         ]
     },
     {
@@ -13,7 +12,6 @@ const bebidas = [
         tamanhos: [
             { tamanho: "2L", preco: 10.00 },
             { tamanho: "1L", preco: 6.00 },
-            { tamanho: "500ml", preco: 4.00 }
         ]
     },
     {
@@ -21,7 +19,6 @@ const bebidas = [
         tamanhos: [
             { tamanho: "2L", preco: 9.50 },
             { tamanho: "1L", preco: 5.50 },
-            { tamanho: "500ml", preco: 4.00 }
         ]
     },
     {
@@ -44,21 +41,18 @@ const bebidas = [
         nome: "Sprite",
         tamanhos: [
             { tamanho: "2L", preco: 9.50 },
-            { tamanho: "1L", preco: 5.50 },
-            { tamanho: "500ml", preco: 4.00 }
+
         ]
     },
     {
         nome: "Schweppes Citrus",
         tamanhos: [
-            { tamanho: "1L", preco: 7.00 },
             { tamanho: "500ml", preco: 4.50 }
         ]
     },
     {
         nome: "H2OH!",
         tamanhos: [
-            { tamanho: "1L", preco: 6.00 },
             { tamanho: "500ml", preco: 4.50 }
         ]
     },
