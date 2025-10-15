@@ -40,7 +40,7 @@ function finalizarPedido() {
 
   mensagem += `Total = R$ ${total.toFixed(2)}`;
 
-  const numeroWhatsApp = "5551992878953"; // Numero whatsApp
+  const numeroWhatsApp = "5521976279796"; // Numero whatsApp
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
   window.open(url, "_blank");
 }
